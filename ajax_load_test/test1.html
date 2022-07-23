@@ -3,51 +3,6 @@
 <head>
 <meta charset="utf-8">
 <title>AJAX Demo</title>
-<script type="text/javascript" src="jquery.js"></script>
-<script language="javascript">
-$(document).ready( function() {
-	
-   $('#d1').click( function() {
-      $('#showarea').load( 'data/1.txt' );
-   });
-      
-   $('#d2').click( function() {
-      $('#showarea').load( 'data/2.txt' );
-   });
-   
-   $('#d3').click( function() {
-      $('#showarea').load( 'data/3.txt' );
-   });
-   
-   $('#d4').click( function() {
-      $('#showarea').load( 'data/4.html' );
-   });
-   
-   $('#d4a').click( function() {
-      $('#showarea').load( 'data/4a.html' );
-   });
-   
-   $('#d5_a').click( function() {
-      $('#showarea').load( 'data/5.html #part1' );
-   });
-   
-   $('#d5_b').click( function() {
-      $('#showarea').load( 'data/5.html #part2' );
-   });
-   
-   $('#d6').click( function() {
-	   prog = 'http://travel.network.com.tw/tourguide/point/showpage/429.html';
-      $('#showarea').load( prog );
-   });
-   
-   
-   $('#btn').click( function() {
-	  var m = $('#message').html();
-      $('#msg').html( m );
-   });
-      
-} );
-</script>
 </head>
 <body>
 <h1>陽明山的景點</h1>
@@ -67,5 +22,53 @@ $(document).ready( function() {
 <button id="btn">取得頁面內部的資料 (僅5.html會有作用)</button>
 <p id="msg">&nbsp;</p>
 <hr />
+
+
+<script src="jquery.js"></script>
+<script>
+$(document).ready( function() {
+	
+    $('#d1').click( function() {
+        $('#showarea').load( 'data/1.txt' );
+    });
+        
+    $('#d2').click( function() {
+        $('#showarea').load( 'data/2.txt' );
+    });
+    
+    $('#d3').click( function() {
+        $('#showarea').load( 'data/3.txt' );
+    });
+    
+    $('#d4').click( function() {
+        $('#showarea').load( 'data/4.html' );
+    });
+    
+    $('#d4a').click( function() {
+        $('#showarea').load( 'data/4a.html' );
+    });
+    
+    $('#d5_a').click( function() {
+        $('#showarea').load( 'data/5.html #part1' );
+    });
+    
+    $('#d5_b').click( function() {
+        $('#showarea').load( 'data/5.html #part2' );
+    });
+    
+    $('#d6').click( function() {
+        prog = 'http://travel.network.com.tw/tourguide/point/showpage/429.html';
+        $('#showarea').load( prog );
+    });
+    
+    
+    $('#btn').click( function() {
+        var m = $('#message').html();
+        $('#msg').html( m );
+    });
+
+} );
+</script>
+
 </body>
 </html>

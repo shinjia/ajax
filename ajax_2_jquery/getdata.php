@@ -1,30 +1,27 @@
 <?php
-$p_code = isset($_GET['code']) ? $_GET['code'] : 'XX';
+$code = isset($_GET['code']) ? $_GET['code'] : 'XX';
 
-switch($p_code)
+switch($code)
 {
-   case 'TP' :
+    case '台北' :
         $a_data = array('木柵', '萬華', '信義', '大同' );
         break;
-   
-   case 'NT' :
+    
+    case '新北' :
         $a_data = array('板橋', '三重', '永和', '新莊', '新店' );
         break;
-   
-   default:
+    
+    default:
         $a_data = array('xxx', 'yyy', 'zzz');
 }
 
 
 $str = '';
-$str .= '<SELECT size="6">';
-foreach($a_data as $one)
-{
-   $str .= '<OPTION>' . $one . '</OPTION>' . "\n";
+$str .= '<select size="6">';
+foreach($a_data as $one) {
+    $str .= '<option>' . $one . '</option>' . "\n";
 }
-$str .= '</SELECT>';
-
+$str .= '</select>';
 
 echo $str;
-
 ?>
